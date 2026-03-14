@@ -1,5 +1,5 @@
 <h1 align="center">
-  💼 Dhiago Frutuoso — Portfólio
+  💼 Dhiogo Frutuoso — Portfólio
 </h1>
 
 <p align="center">
@@ -65,7 +65,7 @@ Portfolio/
 
 O projeto está publicado via **GitHub Pages** com domínio personalizado:
 
-🔗 [dhiogofrutuosoportfolio.com.br](https://dhiogofrutuosoportfolio.com.br)
+🔗 [dhiogofrutuoso.github.io/portfolio](https://dhiogofrutuoso.github.io/Portfolio/)
 
 ---
 
@@ -78,5 +78,5 @@ Feito por **Dhiogo Frutuoso** — sinta-se à vontade para entrar em contato!
 ---
 
 <p align="center">
-  Desenvolvido com 💙 por Dhiago Frutuoso
+  Desenvolvido com 💙 por Dhiogo Frutuoso
 </p>

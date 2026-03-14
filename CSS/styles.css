@@ -1,0 +1,978 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* :root {
+  font-size: 62.5%;
+} */
+
+body,
+button,
+input,
+select,
+textarea,
+h1,
+h2,
+h3,
+h4,
+p {
+  font-family: "Kanit", Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #000000;
+}
+
+aside #back-to-top-button {
+  height: 50px;
+  width: 50px;
+  background: linear-gradient(135deg, rgb(179, 0, 0) 0%, rgb(68, 0, 0)100%);
+  border-radius: 50%;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  cursor: pointer;
+  padding: .8rem;
+  z-index: 1;
+  transition: all .5s ease;
+}
+
+aside #back-to-top-button:hover {
+  transform: translateY(-1rem);
+}
+
+aside #back-to-top-button img {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3rem;
+
+  z-index: 2;
+  height: 3rem;
+  width: 100%;
+  font-size: 0.8rem;
+  background: black;
+}
+
+header #navbar .nav-brand {
+  text-decoration: none;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+
+header #navbar .nav-list {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  font-weight: 200;
+  gap: 2rem;
+  color: rgb(0, 0, 0);
+}
+
+header #navbar .nav-list .nav-item a {
+  text-decoration: none;
+  list-style: none;
+  color: #ffffff;
+  transition: all 0.4s ease-in-out;
+}
+
+header #navbar .nav-list .nav-item a:hover {
+  color: #a7a7a7;
+  transform: scale(1.5);
+}
+
+header #navbar .nav-list .nav-item .about-me {
+  color: rgb(161, 0, 0);
+}
+
+header #navbar .nav-list .nav-item .about-me:hover {
+  color: rgb(139, 0, 0);
+}
+
+header #navbar .nav-hamburguer {
+  display: none;
+}
+
+header #navbar .nav-hamburguer img {
+  width: 25px;
+  height: 25px;
+}
+
+@media (max-width: 740px) {
+  header #navbar .nav-hamburguer {
+    display: flex;
+  }
+
+  header #navbar .nav-item {
+    display: none;
+  }
+}
+
+/* Estilização do MAIN */
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(30px);
+  transition: all 1s ease-out;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+.capa {
+  height: 800px;
+  background-color: rgb(255, 255, 255);
+  background-image: url("https://i.pinimg.com/originals/62/12/48/6212485181ca055f760855d98d3ee4bc.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+main {
+  background-color: rgb(0, 0, 0);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main #banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 4rem;
+  height: 500px;
+  width: auto;
+  margin: 0 auto;
+  gap: 3rem;
+}
+
+main #banner .banner-content .banner-content-title {
+  height: 180px;
+  width: 500px;
+
+  color: white;
+
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 60px;
+
+  margin-top: 5rem;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+main #banner .banner-content .banner-content-title .cursor {
+  display: inline-block;
+  width: 3px;
+}
+
+@keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: #ffffff;
+  }
+}
+
+main #banner .banner-content .banner-content-text {
+  color: white;
+  margin-bottom: 40px;
+  margin-top: 2rem;
+
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  width: 500px;
+}
+
+main #banner .banner-image {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: drop-shadow(0 0 40px rgb(255, 0, 0));
+  border: rgb(33, 33, 33) solid 2px;
+  animation: float 4s ease-in-out infinite;
+  transition: all 1.2s ease-in-out;
+}
+
+main #banner .banner-image:hover {
+  filter: drop-shadow(0 0 70px rgb(255, 0, 0));
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+main #banner .contacts {
+  display: flex;
+  gap: 1rem;
+  margin-top: 5rem;
+}
+
+main #banner .contacts a {
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(172, 0, 0);
+  filter: drop-shadow(0 0 5px rgb(255, 0, 0));
+  transition: all .3s ease;
+}
+
+main #banner .contacts a:hover {
+  transform: translateY(-5px);
+  filter: drop-shadow(0 0 8px rgb(255, 0, 0));
+}
+
+main #banner .contacts a img {
+  width: 100%;
+  height: 100%;
+  border: rgb(172, 0, 0) 1px solid;
+  border-radius: 50%;
+}
+
+@media (max-width: 900px) {
+  main #banner {
+    margin-top: 8rem;
+    margin-bottom: 3rem;
+    flex-direction: column-reverse;
+    align-items: center;
+    height: 800px;
+  }
+
+  main #banner .banner-content {
+    text-align: center;
+  }
+
+  main #banner .banner-content .banner-content-text {
+    width: auto;
+  }
+  main #banner .banner-content .banner-content-title {
+    width: auto;
+    height: 310px;
+  }
+
+  main #banner .contacts {
+    justify-content: center;
+  }
+}
+
+/* main #tecnologias */
+
+main #tecnologias {
+  min-height: 400px;
+  background-color: rgb(0, 0, 0);
+  padding: 2rem 0;
+}
+
+main #tecnologias h3 {
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+main #tecnologias .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+main #tecnologias .cards .card {
+  background: black;
+  padding: 1rem;
+  width: 550px;
+  height: 350px;
+  border-radius: 20px;
+  border: rgb(64, 64, 64) solid 3px;
+  background: linear-gradient(135deg, rgb(32, 32, 32) 0%, rgb(11, 11, 11) 100%);
+  filter: drop-shadow(0 0 8px rgb(42, 42, 42));
+  transition: all 0.5s ease;
+}
+
+main #tecnologias .cards .card:hover {
+  transform: scale(1.02);
+  filter: drop-shadow(0 0 15px rgb(42, 42, 42));
+}
+
+main #tecnologias .cards .card .card-title {
+  font-size: 25px;
+  animation: float-title 4s ease-in-out infinite;
+  margin-top: 0.3rem;
+  margin-bottom: 1.3rem;
+}
+
+@keyframes float-title {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+main #tecnologias .cards .card .figures {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+main #tecnologias .cards .card .figures .box {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgb(39, 39, 39) 0%, rgb(27, 27, 27) 100%);
+  width: 32.2%;
+  height: 7.4rem;
+  padding: 1rem;
+  gap: 0.5rem;
+  transition: all 0.5s ease;
+}
+
+main #tecnologias .cards .card .figures .box:hover {
+  transform: scale(1.01);
+  filter: drop-shadow(0 0 4px rgb(112, 112, 112));
+}
+
+@media (max-width: 740px) {
+  main #tecnologias .cards .card .figures .box {
+    width: 31.9%;
+    height: 12vh;
+  }
+}
+
+main #tecnologias .cards .card .figures .box img {
+  margin: 0 auto;
+}
+
+main #tecnologias .cards .card .figures .box h4 {
+  color: white;
+  font-weight: 200;
+  font-size: 12px;
+  margin: 0 auto;
+}
+
+.btn-light-effect {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 2s ease;
+}
+
+.btn-light-effect::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -300%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(
+    120deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.048) 50%,
+    transparent 60%
+  );
+  transition: all 4s cubic-bezier(0.19, 1, 0.22, 1);
+  pointer-events: none;
+}
+
+.btn-light-effect:hover::before {
+  left: 150%;
+}
+
+/* honrarias */
+
+main #honrarias {
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+  width: auto;
+  margin-top: 10rem;
+  background-color: rgb(0, 0, 0);
+}
+
+main #honrarias h3 {
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+main #honrarias .cards {
+  display: flex;
+  
+  flex-wrap: wrap;
+  justify-content: center;
+
+  height: auto;
+  padding: 2rem 2rem;
+  border-radius: 2rem;
+  gap: 2rem;
+
+  background: linear-gradient(135deg, rgb(24, 24, 24) 0%, rgb(26, 26, 26) 100%);
+
+  animation: float_and_shiny 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 2px rgb(206, 206, 206));
+  transition: all 4s ease;
+}
+
+@keyframes float_and_shiny {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+main #honrarias .cards .card {
+  width: 500px;
+  height: 290px;
+  padding: 1rem;
+  border-radius: 2rem;
+
+  background: linear-gradient(135deg, rgb(74, 74, 74) 0%, rgb(23, 23, 23) 100%);
+  
+  z-index: 1;
+  transition: all .5s ease;
+}
+
+main #honrarias .cards .card:hover {
+  transform: scale(1.05);
+}
+
+main #honrarias .cards .card .card-title {
+  display: flex;
+  width: 100%;
+  height: 40%;
+}
+
+main #honrarias .cards .card .card-title .title-img {
+  min-width: 130px;
+  height: 100%;
+}
+
+main #honrarias .cards .card .card-title .title-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+main #honrarias .cards .card .card-title .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 14px;
+  padding: 0 1rem;
+}
+
+main #honrarias .cards .card .card-title .info .date {
+  color: white;
+}
+
+main #honrarias .cards .card .card-title .info .title {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  color: white;
+  margin-top: 0.3rem;
+  font-weight: 400;
+}
+
+main #honrarias .cards .card .description-case {
+  width: 100%;
+  height: 140px;
+  margin-top: 1rem;
+  font-size: 14px;
+  border-radius: 1rem;
+  color: white;
+  padding: 1rem 1rem;
+  background: linear-gradient(135deg, rgba(129, 129, 129, 0.178) 0%, rgba(88, 88, 88, 0.137) 100%);
+}
+
+@media (max-width: 510px) {
+  main #honrarias .cards .card .card-title .info .title,
+  main #honrarias .cards .card .description-case {
+    font-size: 10px;
+  }
+}
+
+/* /* main #certificados .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+main #certificados .cards .card {
+  background: black;
+  padding: 1rem;
+  width: 32.2%;
+  height: 700px;
+  border-radius: 20px;
+  border: rgb(64, 64, 64) solid 3px;
+  background: linear-gradient(135deg, rgb(32, 32, 32) 0%, rgb(11, 11, 11) 100%);
+  filter: drop-shadow(0 0 18px rgb(42, 42, 42));
+  transition: all 0.5s ease;
+}
+
+main #certificados .cards .card:hover {
+  transform: scale(1.03);
+  filter: drop-shadow(0 0 30px rgb(42, 42, 42));
+}
+
+@media (max-width: 740px) {
+  main #certificados .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main #certificados .cards .card {
+    background: black;
+    padding: 1rem;
+    width: 80%;
+    height: 700px;
+    border-radius: 20px;
+    border: rgb(64, 64, 64) solid 3px;
+    background: linear-gradient(135deg, rgb(32, 32, 32) 0%, rgb(11, 11, 11) 100%);
+    filter: drop-shadow(0 0 18px rgb(42, 42, 42));
+    transition: all 0.5s ease;
+  }
+}
+
+main #certificados .cards .card .card-title {
+  display: flex;
+  text-align: start;
+  align-items: center;
+  margin-bottom: 1.3rem;
+  color: white;
+  gap: 1rem;
+}
+
+main #certificados .cards .card .card-title .img {
+  margin-top: 0.3rem;
+  margin-bottom: 1.3rem;
+  width: 40px;
+  height: 40px;
+  background-color: gray;
+  border-radius: 50%;
+  border: gray solid 1px;
+}
+
+main #certificados .cards .card .card-title .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+main #certificados .cards .card .card-title .ada {
+  text-align: start;
+  height: 40px;
+  width: 80px;
+  margin-bottom: 1.3rem;
+}
+
+main #certificados .cards .card .card-title h3 {
+  text-align: start;
+  font-size: 1.5rem;
+  margin-bottom: 1.3rem;
+}
+
+main #certificados .cards .card .links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 88%;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  margin-top: -1.2rem;
+  gap: 0.5rem;
+  font-weight: 200;
+  background: linear-gradient(135deg, rgb(32, 32, 32) 0%, rgb(11, 11, 11) 100%);
+}
+
+main #certificados .cards .card .links a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.6s ease;
+}
+
+main #certificados .cards .card .links a:hover {
+  cursor: pointer;
+  transform: translateX(3px);
+  color: rgb(184, 0, 0);
+} 
+
+.btn-light-effect-honrarias {
+  position: relative;
+  overflow: hidden; 
+  transition: all 3s ease-in-out;
+}
+
+.btn-light-effect-honrarias::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -300%;
+  width: 300%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.1) 50%, /* Aumentei levemente a opacidade para ser visível no dark mode */
+    /*transparent 60%
+  );
+  transition: all 4s cubic-bezier(0.19, 1, 0.22, 1);
+  pointer-events: none;
+  z-index: 3; 
+}
+
+.btn-light-effect-honrarias:hover::before {
+  left: 150%;
+}
+*/
+
+
+
+main #projetos {
+  height: 900px;
+  margin-top: 10rem;
+  background-color: rgb(0, 0, 0);
+  overflow: hidden;
+}
+
+main #projetos h3 {
+  font-size: 40px;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+main #projetos .my-slider {
+  display: flex;
+  align-items: center;
+  height: 650px;
+  gap: 1.5rem;
+  padding: 1rem;
+  transition: transform 0.7s cubic-bezier(0.5, 0, 0.1, 1);
+}
+
+.no-transition {
+  transition: none !important;
+}
+
+main #projetos .my-slider .card {
+  background: black;
+  border-radius: 20px;
+  height: 600px;
+  border: rgb(64, 64, 64) solid 3px;
+  background: linear-gradient(135deg, rgb(32, 32, 32) 0%, rgb(11, 11, 11) 100%);
+  filter: drop-shadow(0 0 10px rgb(42, 42, 42));
+  transition: all 0.5s ease;
+  box-sizing: border-box;
+}
+
+main #projetos .my-slider .card:hover {
+  transform: scale(1.05);
+}
+
+main #projetos .my-slider .card .img {
+  margin-bottom: 1.3rem;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+main #projetos .my-slider .card .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+main #projetos .my-slider .card h3 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 20px;
+  color: white;
+  margin: 8px;
+}
+
+main #projetos .my-slider .card .links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem 2rem;
+  border-radius: 20px;
+  margin-top: -3rem;
+  gap: 0.5rem;
+  font-weight: 200;
+}
+
+main #projetos .my-slider .card .links .github {
+  display: flex;
+  width: 100%;
+  height: 30px;
+  background-color: rgb(170, 0, 0);
+  border: gray solid 1px;
+  border-radius: 1rem;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s ease-in;
+}
+
+main #projetos .my-slider .card .links .github a {
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+main #projetos .my-slider .card .links .github a:hover {
+  cursor: pointer;
+}
+
+main #projetos .my-slider .card .links .text {
+  background: linear-gradient(135deg, rgb(32, 32, 32) 0%, rgb(11, 11, 11) 100%);
+  padding: 0.5rem;
+  height: 230px;
+  border-radius: 1rem;
+}
+
+main #projetos .my-slider .card .links .text h4 {
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  font-weight: 300;
+  filter: drop-shadow(0 0 2px white);
+}
+
+main #projetos .my-slider .card .links .text p {
+  color: white;
+  font-size: 15px;
+}
+
+main #projetos .my-slider .card .links .habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  height: 95px;
+  padding: 1rem 0;
+  gap: 0.5rem 0.5rem;
+  justify-content: center;
+}
+
+main #projetos .my-slider .card .links .habilidades .block {
+  display: flex;
+  width: 70px;
+  height: 30px;
+  background-color: rgb(36, 31, 31);
+  border: gray solid 1px;
+  border-radius: 1rem;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s ease-in;
+}
+
+main #projetos .my-slider .card .links .habilidades .block:hover {
+  transform: scale(1.05);
+}
+
+main #projetos .my-slider .card .links .habilidades .block h4 {
+  color: white;
+  font-size: 10px;
+}
+
+@media (max-width: 740px) {
+  main #projetos .my-slider .card {
+    height: 650px;
+  }
+
+  main #projetos .my-slider .card .links .habilidades .block h4 {
+    font-size: 11px;
+  }
+
+  main #projetos .my-slider .card .links .habilidades {
+    height: 120px;
+  }
+
+  main #projetos .my-slider .card .links .text h4,
+  main #projetos .my-slider .card .links .text p {
+    font-size: 11px;
+  }
+}
+
+/* .btn-light-effect-projetos {
+  position: relative;
+  overflow: hidden;
+  transition: all 2s ease-in-out;
+}
+
+.btn-light-effect-projetos::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -800%;
+  width: 800%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.048) 50%,
+    transparent 60%
+  );
+  transition: all 4s cubic-bezier(0.19, 1, 0.22, 1);
+  pointer-events: none;
+}
+
+.btn-light-effect-projetos:hover::before {
+  left: 150%;
+} */
+
+.slider-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.slider-controls button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: 1px solid rgb(64, 64, 64);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.slider-controls button:hover {
+  filter: drop-shadow(0 0 14px rgb(155, 0, 0));
+  border-color: white;
+}
+
+.slider-controls .prev {
+  left: 0;
+}
+
+.slider-controls .next {
+  right: 0;
+}
+
+.tns-controls,
+.tns-nav {
+  display: none;
+}
+
+
+/* Contatos */
+
+
+#contatos {
+  height: 300px;
+  background-color: rgb(24, 24, 24);
+  padding: 3rem;
+  align-items: center;
+}
+
+#contatos .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 10px;
+  gap: 1rem;
+}
+
+#contatos .contact h1 {
+  font-weight: 400;
+
+  background-image: linear-gradient(to right, #cc0000, #880000);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  color: transparent;
+}
+
+#contatos .contact h2 {
+  color: gray;
+  font-weight: 200;
+}
+
+#contatos .contact .contacts {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+#contatos .contact .contacts a {
+  text-decoration: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: rgb(172, 0, 0);
+  filter: drop-shadow(0 0 5px rgb(255, 0, 0));
+  transition: all .3s ease;
+}
+
+#contatos .contact .contacts a:hover {
+  transform: translateY(-5px);
+  filter: drop-shadow(0 0 8px rgb(255, 0, 0));
+}
+
+#contatos .contact .contacts a img {
+  width: 100%;
+  height: 100%;
+  border: rgb(172, 0, 0) 1px solid;
+  border-radius: 50%;
+}

@@ -63,7 +63,7 @@ Portfolio/
 
 ## 🌐 Deploy
 
-O projeto está publicado via **GitHub Pages** com domínio personalizado:
+O projeto está publicado via **GitHub Pages**:
 
 🔗 [dhiogofrutuoso.github.io/portfolio](https://dhiogofrutuoso.github.io/Portfolio/)
 

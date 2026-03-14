@@ -24,7 +24,7 @@
 
 Este portfólio foi criado do zero com tecnologias web puras, sem frameworks ou bibliotecas externas. O objetivo é apresentar minha trajetória como desenvolvedor, destacando minhas habilidades técnicas, projetos desenvolvidos e formas de contato.
 
-O site está hospedado via **GitHub Pages** com domínio personalizado.
+O site está hospedado via **GitHub Pages**.
 
 ---
 

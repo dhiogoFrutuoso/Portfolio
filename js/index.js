@@ -89,8 +89,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
   let slider = tns({
     container: ".my-slider",
     items: 4,
-    loop: false,
-    rewind: true,
+    loop: true,
+    rewind: false,
     swipeAngle: false,
     prevButton: "#customPrev",
     nextButton: "#customNext",

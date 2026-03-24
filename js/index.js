@@ -1,8 +1,38 @@
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+})
+
+// Scroll fluido para links da navbar
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    const target = document.querySelector(link.getAttribute('href'))
+    if (!target) return
+
+    lenis.scrollTo(target, {
+      duration: 1.5,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    })
+  })
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
+
 const backToTopElement = document.getElementById("back-to-top-button");
 
 const handleBackToTop = () => {
-  window.scrollTo({ top: 0, right: 0, behavior: "smooth" });
-  backToTopElement.style.visibility = 'hidden';
+  lenis.scrollTo(0, {
+    duration: 1.5,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  })
+  backToTopElement.style.visibility = "hidden";
 };
 
 backToTopElement.addEventListener("click", handleBackToTop);

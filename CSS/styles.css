@@ -14,10 +14,6 @@ body {
   overflow-x: hidden;
 }
 
-/* :root {
-  font-size: 62.5%;
-} */
-
 body,
 button,
 input,
@@ -70,12 +66,6 @@ header {
   width: 100%;
   font-size: 0.8rem;
   background: black;
-}
-
-header #navbar .nav-brand {
-  text-decoration: none;
-  font-weight: 500;
-  color: rgb(255, 255, 255);
 }
 
 header #navbar .nav-list {
@@ -542,145 +532,6 @@ main #honrarias .cards .card .description-case {
   }
 }
 
-/* /* main #certificados .cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.2rem;
-}
-
-main #certificados .cards .card {
-  background: black;
-  padding: 1rem;
-  width: 32.2%;
-  height: 700px;
-  border-radius: 20px;
-  border: rgb(64, 64, 64) solid 3px;
-  background: linear-gradient(135deg, rgb(32, 32, 32) 0%, rgb(11, 11, 11) 100%);
-  filter: drop-shadow(0 0 18px rgb(42, 42, 42));
-  transition: all 0.5s ease;
-}
-
-main #certificados .cards .card:hover {
-  transform: scale(1.03);
-  filter: drop-shadow(0 0 30px rgb(42, 42, 42));
-}
-
-@media (max-width: 740px) {
-  main #certificados .cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  main #certificados .cards .card {
-    background: black;
-    padding: 1rem;
-    width: 80%;
-    height: 700px;
-    border-radius: 20px;
-    border: rgb(64, 64, 64) solid 3px;
-    background: linear-gradient(135deg, rgb(32, 32, 32) 0%, rgb(11, 11, 11) 100%);
-    filter: drop-shadow(0 0 18px rgb(42, 42, 42));
-    transition: all 0.5s ease;
-  }
-}
-
-main #certificados .cards .card .card-title {
-  display: flex;
-  text-align: start;
-  align-items: center;
-  margin-bottom: 1.3rem;
-  color: white;
-  gap: 1rem;
-}
-
-main #certificados .cards .card .card-title .img {
-  margin-top: 0.3rem;
-  margin-bottom: 1.3rem;
-  width: 40px;
-  height: 40px;
-  background-color: gray;
-  border-radius: 50%;
-  border: gray solid 1px;
-}
-
-main #certificados .cards .card .card-title .img img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-
-main #certificados .cards .card .card-title .ada {
-  text-align: start;
-  height: 40px;
-  width: 80px;
-  margin-bottom: 1.3rem;
-}
-
-main #certificados .cards .card .card-title h3 {
-  text-align: start;
-  font-size: 1.5rem;
-  margin-bottom: 1.3rem;
-}
-
-main #certificados .cards .card .links {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 88%;
-  padding: 3rem 2rem;
-  border-radius: 20px;
-  margin-top: -1.2rem;
-  gap: 0.5rem;
-  font-weight: 200;
-  background: linear-gradient(135deg, rgb(32, 32, 32) 0%, rgb(11, 11, 11) 100%);
-}
-
-main #certificados .cards .card .links a {
-  color: white;
-  text-decoration: none;
-  transition: all 0.6s ease;
-}
-
-main #certificados .cards .card .links a:hover {
-  cursor: pointer;
-  transform: translateX(3px);
-  color: rgb(184, 0, 0);
-} 
-
-.btn-light-effect-honrarias {
-  position: relative;
-  overflow: hidden; 
-  transition: all 3s ease-in-out;
-}
-
-.btn-light-effect-honrarias::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -300%;
-  width: 300%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent 40%,
-    rgba(255, 255, 255, 0.1) 50%, /* Aumentei levemente a opacidade para ser visível no dark mode */
-    /*transparent 60%
-  );
-  transition: all 4s cubic-bezier(0.19, 1, 0.22, 1);
-  pointer-events: none;
-  z-index: 3; 
-}
-
-.btn-light-effect-honrarias:hover::before {
-  left: 150%;
-}
-*/
-
-
-
 main #projetos {
   height: 900px;
   margin-top: 10rem;
@@ -703,10 +554,6 @@ main #projetos .my-slider {
   gap: 1.5rem;
   padding: 1rem;
   transition: transform 0.7s cubic-bezier(0.5, 0, 0.1, 1);
-}
-
-.no-transition {
-  transition: none !important;
 }
 
 main #projetos .my-slider .card {
@@ -850,33 +697,6 @@ main #projetos .my-slider .card .links .habilidades .block h4 {
     font-size: 11px;
   }
 }
-
-/* .btn-light-effect-projetos {
-  position: relative;
-  overflow: hidden;
-  transition: all 2s ease-in-out;
-}
-
-.btn-light-effect-projetos::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -800%;
-  width: 800%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent 40%,
-    rgba(255, 255, 255, 0.048) 50%,
-    transparent 60%
-  );
-  transition: all 4s cubic-bezier(0.19, 1, 0.22, 1);
-  pointer-events: none;
-}
-
-.btn-light-effect-projetos:hover::before {
-  left: 150%;
-} */
 
 .slider-container {
   position: relative;
